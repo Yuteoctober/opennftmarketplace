@@ -55,7 +55,7 @@ section {
   height: 70px;
   align-items: center;
   z-index: 99;
-  transition: .2s ease-in-out;
+  transition: .3s ease-in-out;
 }
 
 .sandwitch {
