@@ -85,16 +85,24 @@ function App() {
 
             // copy nft array
             setDefaultNft(imageData.filter(data => data.nft && data.nft.image_url))
-
-            setTimeout(() => {
-              setScreenLoading(false)
-            }, 3000);
+          
+            loadingTimeout()
+          
             
-     
         } catch (error) {
             console.log('Error fetching images: ' + error.message);
         }
     };
+
+          function loadingTimeout() {
+            setTimeout(() => {
+                if (!nftData) {
+                    loadingTimeout();
+                } else {
+                    setScreenLoading(false);
+                }
+            }, 1000);
+        }
 
     const contextValue = {
       mobileSandwich, setMobileSandwich,
