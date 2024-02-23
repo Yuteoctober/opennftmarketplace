@@ -9,29 +9,32 @@ body {
 }
 
 .screen_loading {
+  display: grid;
   position: relative;
+  place-items: center;
   background: #F07F7F;
   width: 100svw;
   min-height: 100svh;
 }
 
-.screen_loading img {
+.loading_container {
   position: relative;
-  width: 150px;
-  margin-top: 8rem;
-  left: 49%;
-  transform: translate(-50%);
+  left: 1.5rem;
+  bottom: 2rem;
 }
 
-.screen_loading h1 {
+.loading_container img {
   position: relative;
-  left: 50%;
-  transform: translate(-38%);
+  right: 1rem;
+  width: 140px;
+}
+
+.loading_container h1 {
+  position: relative;
   width: 200px;
   font-size: 35px;
   color: rgb(241, 241, 241);
   bottom: .5rem;
-  caret-color: none;
 }
 
 

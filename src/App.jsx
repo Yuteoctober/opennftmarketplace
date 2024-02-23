@@ -128,14 +128,16 @@ function App() {
     if (screenLoading) {
       return (
           <section className='screen_loading'>
-            <img src={loading} alt="loading" />
-            <h1>
-              <TypeAnimation
-                sequence={['Loading....', 900,'Loading', 700]}
-                style={{ fontSize: '30px', border: 'none'}}
-                repeat={Infinity}
-              />
-            </h1>
+            <div className='loading_container'>
+              <img src={loading} alt="loading" />
+              <h1>
+                <TypeAnimation
+                  sequence={['Loading....', 900,'Loading', 700]}
+                  style={{ fontSize: '30px', border: 'none'}}
+                  repeat={Infinity}
+                />
+              </h1>
+            </div>
           </section>
       )
     }
