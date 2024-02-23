@@ -564,6 +564,7 @@ section {
 
 .nft_img {
   display: flex;
+  min-height: 40svh;
   flex-wrap: wrap;
   padding: 1.5rem;
   gap: .7rem;
