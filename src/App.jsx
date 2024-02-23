@@ -89,7 +89,7 @@ function App() {
 
             setTimeout(() => {
               setScreenLoading(false)
-            }, 3500);
+            }, 3000);
             
      
         } catch (error) {
