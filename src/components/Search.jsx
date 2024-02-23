@@ -4,6 +4,7 @@ import { MdOutlineSearch } from "react-icons/md";
 import { BsXLg } from "react-icons/bs";
 import UseContext from '../UserContext'
 import { motion } from "framer-motion"
+import {BsChevronUp, BsChevronDown} from "react-icons/bs";
 
 function Search() {
 
@@ -16,12 +17,14 @@ function Search() {
         activity,
         nftData, setNftData,
         defaultNft,
+        optionFilter, setOptionFilter,
+        optionTxt, setOptionTxt,
       } = useContext(UseContext);
 
     //Filter to default
     function handleFilterDefault() {
-      
       setNftData(defaultNft);
+      setOptionTxt('Default')
       }
   
       //Filter Rank low to high
@@ -34,6 +37,7 @@ function Search() {
         })
         setFilteredNftData(sortedData);
         setNftData(sortedData);
+        setOptionTxt('Rank low to high')
       }
   
       //Filter Rank hIGH to LOW
@@ -46,9 +50,10 @@ function Search() {
         })
         setFilteredNftData(sortedData);
         setNftData(sortedData);
+        setOptionTxt('Rank high to low')
       }
   
-      // Filter Nymber low to high
+      // Filter Number low to high
       function handleSortLowToHigh() {
         const sortedData = filteredNftData.length > 0 ? [...filteredNftData] : [...nftData];
     
@@ -60,6 +65,7 @@ function Search() {
         });
         setFilteredNftData(sortedData);
         setNftData(sortedData);
+        setOptionTxt('Number low to high')
     }
   
       // Filter Nymber hight to low
@@ -73,6 +79,7 @@ function Search() {
         });
         setFilteredNftData(sortedData)
         setNftData(sortedData);
+        setOptionTxt('Number high to low')
     }
 
         // Function to extract the number after '#' from the name
@@ -130,8 +137,33 @@ function Search() {
           >
             <HiArrowsUpDown className='filter_icon' />
           </span>
+            <div className="option_container"
+              onClick={() => {setOptionFilter(!optionFilter);}}
+            >
+              <span className="option_arrow">
+                {optionFilter?<BsChevronUp/>:<BsChevronDown/>}
+              </span>
+              <h2>{optionTxt}</h2>
+              {optionFilter && (
+                <div className="option">
+                <h3 onClick={() => {handleFilterDefault(); setSortWin(false)}}
+                ><span>Default</span></h3>
+                <h3 onClick={() => {handleSortLowToHigh(); setSortWin(false)}}
+                ><span>Number low to high</span></h3>
+                <h3 onClick={() => {handleSortHighToLow(); setSortWin(false)}}
+                ><span>Number high to low</span></h3>
+                <h3 onClick={() => {handleSortRankLowtoHigh(); setSortWin(false)}}
+                ><span>Number high to low</span></h3>
+                <h3 onClick={() => {handleSortRankLowtoHigh(); setSortWin(false)}}
+                ><span>Rank low to highy</span></h3>
+                <h3 onClick={() => {handleSortRankHighToLow(); setSortWin(false)}}
+                ><span>Rank high to low</span></h3>
+              </div>
+              )} 
+          </div>
         </div>
         
+
         <motion.div className="arrange_container"
           style={{zIndex: sortWin? 9999:0}}
           initial={{ opacity: 0}}

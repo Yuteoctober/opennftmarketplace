@@ -14,6 +14,8 @@ import Charts from './components/Chart';
 
 
 function App() {
+    const [optionTxt, setOptionTxt] = useState('Sort');
+    const [optionFilter, setOptionFilter] = useState(false);
     const [mobileSandwich, setMobileSandwich] = useState(false);
     const [dropHidden, setDropHidden] = useState(false);
     const [statHidden, setStatHidden] = useState(false);
@@ -108,6 +110,8 @@ function App() {
       cartItem, setCartItem,
       defaultNft, setDefaultNft,
       scrollPosition, setScrollPosition,
+      optionFilter, setOptionFilter,
+      optionTxt, setOptionTxt,
     }
 
   return (

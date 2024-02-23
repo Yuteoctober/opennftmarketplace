@@ -394,6 +394,7 @@ section {
 }
 
 .search_container .filter_icon {
+  display: none;
   position: relative;
   color: white;
   background: #262525f3;
@@ -403,6 +404,76 @@ section {
   margin-left: 4rem;
   cursor: pointer;
 }
+
+.option_container {
+  position: relative;
+  height: 44px;
+  max-width: 200px;
+  width: 20%;
+  padding-left: 1rem;
+  padding-right: 18px;
+  margin-left: 3.9rem;
+  background: rgba(33, 33, 33, 0.199);
+  bottom: 2px;
+  color: rgba(175, 173, 173, 0.845);
+  border-radius: .4rem;
+  font-size: 14px;
+  border: 1px solid rgba(128, 128, 128, 0.717);
+  cursor: pointer;
+  user-select: none;
+}
+.option_container h2 {
+  position: relative;
+  top: 11px;
+  font-size: 16px;
+  font-weight: 500;
+}
+
+.option_container .option_arrow {
+  position: absolute;
+  right: 1rem;
+  top: 17px;
+  font-size: 15px;
+}
+
+.option {
+  display: grid;
+  position: absolute;
+  place-items: center;
+  width: 100%;
+  top: 3.1rem;
+  left: 0px;
+  color: rgba(232, 227, 227, 0.911);
+  background: #1f1e1e;
+  border-radius: .5rem;
+  padding-top: 6px;
+  z-index: 99999;
+}
+
+.option h3 {
+  position: relative;
+  width: 94%;
+  font-size: 14px;
+  margin-bottom: .5rem;
+  border-radius: .4rem;
+  padding-top: 12px;
+  padding-bottom: 14px;
+  padding-left: 3px;
+}
+
+.option h3:hover {
+  background: #363434;
+}
+
+.option span {
+  position: relative;
+  padding-left: 1rem;
+  
+}
+
+
+
+
 
 .search_container .filter_icon:hover {
   background: rgba(31, 30, 30, 0.952);
@@ -448,6 +519,7 @@ section {
 }
 
 .arrange_container {
+  display: none;
   position: fixed;
   width: 97%;
   height: 320px;
@@ -970,6 +1042,16 @@ section {
     margin-left: 0rem;
   }
 
+  .search_container .filter_icon {
+    display: block;
+  }
+
+  .option_container {
+    display: none;
+  }
+  .arrange_container {
+    display: block;
+  }
 }
 
 
