@@ -58,7 +58,6 @@ function App() {
 
     const apiKey = '8cefdeec8c404d5ca4c2b27360b19dc2';
     const contract = '0xBd3531dA5CF5857e7CfAA92426877b022e612cf8';
-    const numIds = 24;
 
     useEffect(() => {
         fetchData();
@@ -67,8 +66,8 @@ function App() {
     const fetchData = async () => {
         try {
           const promises = [];
-          for (let index = 0; index < numIds; index++) {
-              const id = index + 1 * Math.floor(Math.random()*87) + Math.floor(Math.random());
+          for (let index = 1; index <= 24; index++) {
+            const id = Math.floor(Math.random() * 8888) + 1;
               const apiUrl = `https://api.opensea.io/api/v2/chain/ethereum/contract/${contract}/nfts/${id}`;
               promises.push(axios.get(apiUrl, {
                   headers: {
