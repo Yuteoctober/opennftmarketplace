@@ -67,7 +67,7 @@ function App() {
         try {
           const promises = [];
           for (let index = 1; index <= 24; index++) {
-            const id = Math.floor(Math.random() * 8888) + 1;
+            const id = Math.floor(Math.random() * 8888);
               const apiUrl = `https://api.opensea.io/api/v2/chain/ethereum/contract/${contract}/nfts/${id}`;
               promises.push(axios.get(apiUrl, {
                   headers: {
