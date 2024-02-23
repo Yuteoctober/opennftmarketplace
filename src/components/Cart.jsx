@@ -29,6 +29,7 @@ function Cart() {
         <div className="cart_container">
           <h3>Shopping Cart</h3>
           {cartItem.map((nft, index) => (
+          <>
             <div className="cart_item" key={index}>
               <div className="cart_img">
                 <img src={nft.nft.image_url} alt="NFT" />
@@ -47,8 +48,10 @@ function Cart() {
                 <span><BsXLg/></span>
               </div>
             </div>
+            <div className="cart_line"></div>
+          </>
           ))}
-          <div className="cart_line"></div>
+          
           <button className='btn_checkout'>Checkout</button>
         </div>
       )}
