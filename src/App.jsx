@@ -133,7 +133,7 @@ function App() {
               <h1>
                 <TypeAnimation
                   sequence={['Loading....', 900,'Loading', 700]}
-                  style={{ fontSize: '30px', border: 'none'}}
+                  style={{ fontSize: '25px', border: 'none'}}
                   repeat={Infinity}
                 />
               </h1>

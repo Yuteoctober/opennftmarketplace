@@ -26,13 +26,12 @@ body {
 .loading_container img {
   position: relative;
   right: 1rem;
-  width: 140px;
+  width: 130px;
 }
 
 .loading_container h1 {
   position: relative;
   width: 200px;
-  font-size: 35px;
   color: rgb(241, 241, 241);
   bottom: .5rem;
 }
