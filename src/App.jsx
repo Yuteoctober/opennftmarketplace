@@ -1,3 +1,4 @@
+import loading from './assets/loadpen.gif'
 import { useState, useEffect, useContext} from 'react';
 import UseContext from './UserContext'
 import axios from 'axios';
@@ -10,6 +11,8 @@ import Search from './components/Search';
 import Live from './components/Live';
 import Nft from './components/Nft';
 import Charts from './components/Chart';
+import { TypeAnimation } from 'react-type-animation';
+
 
 
 
@@ -36,6 +39,7 @@ function App() {
     const [cartItem, setCartItem] = useState([]);
     const [defaultNft, setDefaultNft] = useState([]);
     const [scrollPosition, setScrollPosition] = useState(0);
+    const [screenLoading, setScreenLoading] = useState(true);
 
 
     const handleScroll = () => {
@@ -82,6 +86,11 @@ function App() {
 
             // copy nft array
             setDefaultNft(imageData.filter(data => data.nft && data.nft.image_url))
+
+            setTimeout(() => {
+              setScreenLoading(false)
+            }, 3500);
+            
      
         } catch (error) {
             console.log('Error fetching images: ' + error.message);
@@ -113,6 +122,24 @@ function App() {
       optionFilter, setOptionFilter,
       optionTxt, setOptionTxt,
     }
+
+    
+
+    if (screenLoading) {
+      return (
+          <section className='screen_loading'>
+            <img src={loading} alt="loading" />
+            <h1>
+              <TypeAnimation
+                sequence={['Loading....', 900,'Loading', 700]}
+                style={{ fontSize: '35px', border: 'none'}}
+                repeat={Infinity}
+              />
+            </h1>
+          </section>
+      )
+    }
+
 
   return (
     <UserContext.Provider value={contextValue}>

@@ -8,6 +8,35 @@ body {
   background: #151515;
 }
 
+.screen_loading {
+  position: relative;
+  background: #F07F7F;
+  width: 100svw;
+  min-height: 100svh;
+}
+
+.screen_loading img {
+  position: relative;
+  width: 150px;
+  margin-top: 8rem;
+  left: 49%;
+  transform: translate(-50%);
+}
+
+.screen_loading h1 {
+  position: relative;
+  left: 50%;
+  transform: translate(-38%);
+  width: 200px;
+  font-size: 35px;
+  color: rgb(241, 241, 241);
+  bottom: .5rem;
+  caret-color: none;
+}
+
+
+
+
 section {
   position: absolute;
   width: 100%;
