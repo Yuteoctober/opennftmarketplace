@@ -131,7 +131,7 @@ function App() {
               <img src={loading} alt="loading" />
               <h1>
                 <TypeAnimation
-                  sequence={['Loading....', 900,'Loading', 700]}
+                  sequence={['Loading.....', 900,'Loading', 700]}
                   style={{ fontSize: '25px', border: 'none'}}
                   repeat={Infinity}
                 />

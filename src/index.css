@@ -25,7 +25,6 @@ body {
 
 .loading_container img {
   position: relative;
-  right: 1rem;
   width: 130px;
 }
 
@@ -33,6 +32,7 @@ body {
   position: relative;
   width: 200px;
   color: rgb(241, 241, 241);
+  left: 1rem;
   bottom: .5rem;
 }
 
