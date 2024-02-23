@@ -592,6 +592,7 @@ section {
   transform: scale(1.15);
 }
 
+
 .img_des_container {
   position: relative;
   top: -.15rem;
@@ -648,7 +649,7 @@ section {
   top: 0px;
   left: -8px;
   width: 50px;
-  z-index: 999;
+  z-index: 99999;
   opacity: .8;
 }
 

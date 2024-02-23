@@ -73,8 +73,10 @@ export default function Nft() {
           { nftData.length > 0 && (filterByInput ? filteredNftData : nftData).map((nft, index) => (
             <React.Fragment key={index}>
               <motion.div className='img_container' 
+                whileTap={() => {toggleEthState(index); toggleBuy(index)}}
                 onHoverStart={() => {toggleEthState(index); toggleBuy(index)}}
-                onMouseLeave={() => {toggleEthStateAllFalse(); toggleAllBuyFalse()}}
+                onHoverEnd={() => {toggleEthStateAllFalse(); toggleAllBuyFalse()}}
+                onTouchMoveCapture={() => {toggleEthStateAllFalse(); toggleAllBuyFalse()}}
               >
                 {ethStates[index] && (
                   <motion.div className="eth_circle"
