@@ -123,7 +123,7 @@ section {
   border: none;
   height: 20px;
   background: none;
-  font-size: 15px;
+  font-size: 17px;
   font-weight: 600;
   color: white;
   cursor: pointer;
@@ -184,11 +184,16 @@ section {
 
 .cart {
   position: absolute;
+  padding: 5px 10px;
+  border-radius: .5rem;
+  margin-top: 2px;
   right: 2rem;
 }
 
 .cart span {
-  font-size: 20px;
+  position: relative;
+  font-size: 25px;
+  top: 2px;
 }
 
 .cart button {
@@ -450,6 +455,7 @@ section {
   border: 1px solid rgba(128, 128, 128, 0.717);
   cursor: pointer;
   user-select: none;
+  z-index: 2;
 }
 .option_container h2 {
   position: relative;
@@ -1080,6 +1086,68 @@ section {
   }
   .arrange_container {
     display: block;
+  }
+}
+
+@media (min-width: 1600px) {
+  .logo {
+    margin-left: 3%;
+  }
+  .cart {
+    margin-right: 3%;
+  }
+  .project_pic  {
+    margin-left: 3.1%;
+  }
+
+  .project_pic img {
+    width: 90px;
+    height: 90px;
+  }
+
+  .project_name {
+    margin-left: 4.2%;
+  }
+
+
+  .project_name .social {
+    right: 5%;
+  }
+
+  .price_top {
+    margin-left: 4.2%;
+  }
+
+  .description {
+    margin-left: 4.2%;
+  }
+
+  .desseeless {
+    margin-left: 4.2%;
+  }
+
+  .below_des {
+    margin-left: 4.2%;
+  }
+  .item_btn {
+    margin-left: 4.2%;
+  }
+  .line_break {
+    margin-left: 4.2%;
+  }
+  .line_break p {
+    width: 92%;
+  }
+
+  .search_container {
+    margin-left: 3.1%;
+  }
+  .live_container {
+    margin-left: 4.2%;
+  }
+  .nft_img {
+    margin-left: 3%;
+    margin-right: 3%;
   }
 }
 
