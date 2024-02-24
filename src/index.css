@@ -127,6 +127,7 @@ section {
   font-weight: 600;
   color: white;
   cursor: pointer;
+  z-index: 5;
 }
 
 .nav_btn button:hover {
