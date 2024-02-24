@@ -103,7 +103,7 @@ function App() {
                 } else {
                     setScreenLoading(false);
                 }
-            }, 1000);
+            }, 2000);
         }
 
     const contextValue = {
