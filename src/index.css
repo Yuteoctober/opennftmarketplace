@@ -110,6 +110,7 @@ section {
   color: white;
   top: 2px;
   user-select: none;
+  cursor: pointer;
 }
 
 .nav_btn {
