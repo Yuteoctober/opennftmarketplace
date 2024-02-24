@@ -925,12 +925,13 @@ section {
   opacity: .7;
 }
 
+
 .stop h4 {
   position: absolute;
   font-size: 15px;
   color: white;
   top: 2.3rem;
-  left: 2.9rem;
+  left: 2.85rem;
   text-align: center;
 }
 
