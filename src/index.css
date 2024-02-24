@@ -1102,6 +1102,7 @@ section {
   .sandwitch {
     display: block;
     position: absolute;
+    margin-top: 2px;
     right: 1.3rem;
     color: white;
     cursor: pointer;
