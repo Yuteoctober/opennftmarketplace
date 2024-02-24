@@ -919,6 +919,30 @@ section {
   text-align: center;
 }
 
+.back_home {
+  position: absolute;
+  padding-right: 9px;
+  color: white;
+  top: 19.5rem;
+  border-bottom: 2px solid white;
+  z-index: 55555;
+}
+
+.back_home h3 {
+  font-size: 20px;
+}
+
+.back_home:hover {
+  color: rgb(214, 214, 214);
+  border-color: rgb(214, 214, 214);
+}
+
+.back_home span {
+  position: relative;
+  left: .5rem;
+  top: .1rem;
+}
+
 /* ------------------- Activity ---------------- */
 
 .activity_section {

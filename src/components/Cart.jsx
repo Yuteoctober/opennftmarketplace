@@ -4,6 +4,8 @@ import { BsXLg } from "react-icons/bs";
 import dance from '../assets/dance.gif';
 import stop from '../assets/stop.png'
 import road from '../assets/road.png'
+import { FaHouseChimney } from "react-icons/fa6";
+import { Link } from 'react-router-dom';
 
 
 function Cart() {
@@ -28,6 +30,16 @@ function Cart() {
             <h4>Empty <br />cart</h4>
           </div>
           <img src={road} alt="road" className="cart_road" />
+          <div className="back_home">
+              <Link to="/" style={{color: 'inherit', textDecoration: 'none'}} >
+                  <h3>
+                    Back to homepage 
+                    <span>
+                      <FaHouseChimney />
+                    </span>
+                  </h3>
+              </Link> 
+          </div>
         </>
       ) : (
         <div className="cart_container">
