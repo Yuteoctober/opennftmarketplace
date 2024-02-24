@@ -17,6 +17,7 @@ import { TypeAnimation } from 'react-type-animation';
 
 
 function App() {
+    const [prevSortedData, setPrevSortedData] = useState([]);
     const [optionTxt, setOptionTxt] = useState('Sort');
     const [optionFilter, setOptionFilter] = useState(false);
     const [mobileSandwich, setMobileSandwich] = useState(false);
@@ -128,6 +129,7 @@ function App() {
       scrollPosition, setScrollPosition,
       optionFilter, setOptionFilter,
       optionTxt, setOptionTxt,
+      prevSortedData, setPrevSortedData,
     }
 
     

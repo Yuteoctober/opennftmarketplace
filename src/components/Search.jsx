@@ -98,6 +98,7 @@ function Search() {
           setFilterByInput(false);
           setFilteredNftData([]);
           setNftData(defaultNft)
+          setOptionTxt('Sort')
           return;
       }
        setFilterByInput(true)
