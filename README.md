@@ -1,8 +1,7 @@
-# React + Vite
+OpenNFT is a mock market place for buying and selling NFT like OpenSea.
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+here is a link to live app https://opennft.netlify.app/
 
-Currently, two official plugins are available:
+built using react and labraries.. 
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react/README.md) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+hit me up if you are interested in my work.
