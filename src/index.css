@@ -446,6 +446,7 @@ section {
   color: white;
   background: #262525f3;
   font-size: 22px;
+  bottom: 1px;
   padding: 12px;
   border-radius: .5rem;
   margin-left: 4rem;
@@ -720,6 +721,8 @@ section {
   top: -.15rem;
   padding: 10px;
   height: 100px;
+  border-bottom-left-radius: .8rem;
+  border-bottom-right-radius: .8rem;
   background: #2a2727;
 }
 
