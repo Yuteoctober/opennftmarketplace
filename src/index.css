@@ -921,20 +921,22 @@ section {
 
 .back_home {
   position: absolute;
-  padding-right: 9px;
+  padding: 12px 15px;
+  padding-right: 23px;
   color: white;
   top: 19.5rem;
-  border-bottom: 2px solid white;
+  border-radius: .5rem;
+  background: rgb(45, 45, 45);
   z-index: 55555;
 }
 
 .back_home h3 {
-  font-size: 20px;
+  font-size: 19px;
 }
 
 .back_home:hover {
-  color: rgb(214, 214, 214);
-  border-color: rgb(214, 214, 214);
+  color: rgb(202, 200, 200);
+  background: rgb(51, 51, 51);;
 }
 
 .back_home span {
