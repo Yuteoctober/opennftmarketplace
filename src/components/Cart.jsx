@@ -2,6 +2,8 @@ import { useContext } from "react";
 import UseContext from "../UserContext";
 import { BsXLg } from "react-icons/bs";
 import dance from '../assets/dance.gif';
+import stop from '../assets/stop.png'
+import road from '../assets/road.png'
 
 
 function Cart() {
@@ -18,12 +20,18 @@ function Cart() {
     <section className='cart_page'>
       {cartItem.length <= 0 ? (
         <>
-          <div className="conversation-bubble">
+          {/* <div className="conversation-bubble">
             <p>Your cart is empty</p>
-          </div>
+          </div> */}
           <div className="dance_gif">
             <img src={dance} alt="dance" />
           </div>
+          <div className="stop">
+            <img src={stop} alt="stop" className="cart_stop" />
+            <h4>Empty <br />cart</h4>
+          </div>
+          <img src={road} alt="road" className="cart_road" />
+          
         </>
       ) : (
         <div className="cart_container">

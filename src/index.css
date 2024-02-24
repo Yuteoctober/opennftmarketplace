@@ -900,6 +900,9 @@ section {
   transform: rotate(50deg);
   top: 43.5px;
 }
+.dance_gif {
+  z-index: 5;
+}
 
 .dance_gif img {
   position: relative;
@@ -907,6 +910,35 @@ section {
   top: 8rem;
 }
 
+.stop {
+  position: absolute;
+  margin-top: 3.5rem;
+  margin-left: 9rem;
+  z-index: 5;
+}
+
+.stop .cart_stop {
+  width: 140px;
+
+}
+
+.cart_road {
+  position: absolute;
+  margin: 0 auto;
+  width: 190px;
+  top: 10.2rem;
+  z-index: 1;
+  opacity: .7;
+}
+
+.stop h4 {
+  position: absolute;
+  font-size: 15px;
+  color: white;
+  top: 2.3rem;
+  left: 2.9rem;
+  text-align: center;
+}
 
 /* ------------------- Activity ---------------- */
 
