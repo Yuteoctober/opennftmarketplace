@@ -1,3 +1,4 @@
+import beach from './assets/beach_chair.png'
 import loading from './assets/loadpen.gif'
 import { useState, useEffect, useContext} from 'react';
 import UseContext from './UserContext'
@@ -138,11 +139,12 @@ function App() {
       return (
           <section className='screen_loading'>
             <div className='loading_container'>
-              <img src={loading} alt="loading" />
+              <img src={loading} alt="loading" className='pen_guitar' />
+              <img src={beach} alt="beach" className='beach' />
               <h1>
                 <TypeAnimation
-                  sequence={['Loading.....', 900,'Loading', 700]}
-                  style={{ fontSize: '25px', border: 'none'}}
+                  sequence={['Loading.....', 1200,'Loading', 1000]}
+                  style={{ fontSize: '25px', border: 'none', letterSpacing: '.3rem'}}
                   repeat={Infinity}
                 />
               </h1>
