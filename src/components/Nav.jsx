@@ -79,7 +79,7 @@ export default function Nav() {
                             setStatHidden(false);
                             setDropHidden(false)}}
           >
-            {mobileSandwich?<BsXLg/>:<BsList />}
+            {mobileSandwich?<BsXLg className="nav_x"/>:<BsList className="nav_sandwich"/>}
           </div>
             <div className='cart'>
             <Link to="/cart" style={{color: 'inherit'}}>

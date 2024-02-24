@@ -1104,9 +1104,15 @@ section {
     position: absolute;
     right: 1.3rem;
     color: white;
-    font-size: 22px;
     cursor: pointer;
   }
+  .sandwitch .nav_x{
+    font-size: 22px;
+  }
+  .sandwitch .nav_sandwich{
+    font-size: 25px;
+  }
+
   .sandwitch:hover {
     color: grey;
   }
