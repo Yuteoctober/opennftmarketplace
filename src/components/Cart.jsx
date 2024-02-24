@@ -20,9 +20,6 @@ function Cart() {
     <section className='cart_page'>
       {cartItem.length <= 0 ? (
         <>
-          {/* <div className="conversation-bubble">
-            <p>Your cart is empty</p>
-          </div> */}
           <div className="dance_gif">
             <img src={dance} alt="dance" />
           </div>
@@ -31,7 +28,6 @@ function Cart() {
             <h4>Empty <br />cart</h4>
           </div>
           <img src={road} alt="road" className="cart_road" />
-          
         </>
       ) : (
         <div className="cart_container">
