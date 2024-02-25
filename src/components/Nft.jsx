@@ -46,6 +46,12 @@ export default function Nft() {
         const closeAllBuy = buy.map(() => false);
         setBuy(closeAllBuy);
       }
+      
+      // Function make all ETH disappear
+      const toggleEthStateAllFalse = () => {
+        const closeAllETH = ethStates.map(() => false);
+        setEthStates(closeAllETH);
+      }
   
       // Function to toggle eth state for a specific index
       const toggleEthState = (index) => {
@@ -55,11 +61,7 @@ export default function Nft() {
       };
       
   
-      // Function make all ETH disappear
-      const toggleEthStateAllFalse = () => {
-        const closeAllETH = ethStates.map(() => false);
-        setEthStates(closeAllETH);
-      }
+      
 
   return (
     <>
@@ -69,7 +71,8 @@ export default function Nft() {
         )
         :
         (
-          <motion.div className="nft_img">
+          <motion.div className="nft_img" 
+          onClick={() => {toggleAllBuyFalse();toggleEthStateAllFalse();}}>
           { nftData.length > 0 && (filterByInput ? filteredNftData : nftData).map((nft, index) => (
             <React.Fragment key={index}>
               <motion.div className='img_container' 

@@ -138,6 +138,9 @@ function Search() {
           >
             <HiArrowsUpDown className='filter_icon' />
           </span>
+
+            {/* ----------------- desktop sort -------------- */}
+
             <div className="option_container"
               onClick={() => {setOptionFilter(!optionFilter);}}
             >

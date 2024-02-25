@@ -119,6 +119,9 @@ section {
   font-size: 23px;
   color: white;
   top: 2px;
+  -webkit-user-select: none; 
+  -moz-user-select: none; 
+  -ms-user-select: none; 
   user-select: none;
   cursor: pointer;
 }
@@ -451,6 +454,7 @@ section {
   border-radius: .5rem;
   margin-left: 4rem;
   cursor: pointer;
+  z-index: 2;
 }
 
 .option_container {
@@ -468,6 +472,9 @@ section {
   font-size: 14px;
   border: 1px solid rgba(128, 128, 128, 0.717);
   cursor: pointer;
+  -webkit-user-select: none; 
+  -moz-user-select: none; 
+  -ms-user-select: none; 
   user-select: none;
   z-index: 2;
 }
@@ -476,6 +483,10 @@ section {
   top: 9px;
   font-size: 16px;
   font-weight: 500;
+  -webkit-user-select: none; 
+  -moz-user-select: none; 
+  -ms-user-select: none; 
+  user-select: none;
 }
 
 .option_container .option_arrow {
@@ -581,6 +592,10 @@ section {
   padding-bottom: 2rem;
   padding-left: 1%;
   padding-right: 1.5%;
+  -webkit-user-select: none; 
+  -moz-user-select: none; 
+  -ms-user-select: none; 
+  user-select: none;
 }
 
 .arrange_container .arrange_exit {
@@ -1147,6 +1162,8 @@ section {
   .arrange_container {
     display: block;
   }
+  
+
 }
 
 @media (min-width: 1600px) {
