@@ -96,9 +96,9 @@ export default function Nft() {
                   <h4>Rank: {nft.nft.rarity.rank}</h4>
                   <motion.h3
                     onClick={() => addToCart(nft)}
-                    animate={{y: buy[index] ? 0 : 50, opacity: 1}}
-                    whileTap={{background: '#ffffff00'}}
-                    transition={{ type: 'spring', duration: 0.35 }}
+                    animate={{y: buy[index] ? 0 : 50, opacity: buy[index]? 1 : 0}}
+                    style={{background: cartItem.includes(nft)?'grey':''}}
+                    transition={{ type: 'spring', duration: 0.5, ease: 'easeInOut'}}
                   >
                     Buy now
                   </motion.h3>
