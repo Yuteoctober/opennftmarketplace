@@ -14,7 +14,7 @@ body {
   place-items: center;
   background: #F07F7F;
   width: 100svw;
-  min-height: 100svh;
+  height: 100svh;
 }
 
 .loading_container {
