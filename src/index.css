@@ -15,8 +15,8 @@ body {
   justify-content: center;
   background: #F07F7F;
   width: 100%;
-  height: 100vh;
-  overflow: hidden;
+  height: 100svh;
+  touch-action: none;
 }
 
 .loading_container {
@@ -27,6 +27,7 @@ body {
 
 .loading_container .pen_guitar {
   position: relative;
+  margin-top: 2rem;
   width: 85px;
   bottom: 3.8rem;
   left: 3.5rem;

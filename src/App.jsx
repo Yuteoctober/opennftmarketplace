@@ -101,7 +101,7 @@ function App() {
                 if (!nftData) {
                     loadingTimeout();
                 } else {
-                    setScreenLoading(true);
+                    setScreenLoading(false);
                 }
             }, 2000);
         }
