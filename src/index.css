@@ -550,7 +550,7 @@ section {
 .search_container  .search_bar {
   position: relative;
   max-width: 750px;
-  width: 65%;
+  width: 62.5%;
   margin-left: .8rem;
   bottom: 2px;
 }
@@ -704,22 +704,27 @@ section {
 /* ---------------------- NFT ------------------- */
 
 .nft_img {
-  display: flex;
+  /* display: flex;
   min-height: 40svh;
   flex-wrap: wrap;
   padding: 1.5rem;
   gap: .7rem;
-  justify-content: space-evenly;
+  justify-content: space-evenly; */
+  /* ------------- grid ---------------- */
+  display: grid; 
+  position: relative;
+  margin-left: 1.5rem;
+  margin-right: 1.5rem;
+  margin-top: 1.5rem;
+  margin-bottom: 1.2rem;
+  grid-template-columns: repeat(auto-fill, minmax(180px, 2fr)); 
+  column-gap: .7rem;
+  row-gap: .7rem;
+  justify-content: space-evenly; 
 }
 
-.nft_img.last-row {
-  justify-content: flex-start;
-}
 
 .nft_img .img_container {
-  flex: 1 0 20%;
-  min-width: 150px;
-  max-width: 300px;
   overflow: hidden;
   border-radius: .8rem;
   cursor: pointer;
@@ -1227,8 +1232,8 @@ section {
     margin-left: 4.2%;
   }
   .nft_img {
-    margin-left: 3%;
-    margin-right: 3%;
+    margin-left: 4.2%;
+    margin-right: 4.2%;
   }
 }
 
