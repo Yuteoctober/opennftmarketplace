@@ -72,8 +72,9 @@ export default function Nft() {
         :
         (
           <motion.div className="nft_img" 
-          onClick={() => {toggleAllBuyFalse();toggleEthStateAllFalse();}}>
-          { nftData.length > 0 && (filterByInput ? filteredNftData : nftData).map((nft, index) => (
+          // onClick={() => {toggleAllBuyFalse();toggleEthStateAllFalse();}}>
+         > 
+         { nftData.length > 0 && (filterByInput ? filteredNftData : nftData).map((nft, index) => (
             <React.Fragment key={index}>
               <motion.div className='img_container' 
                 whileTap={() => {toggleEthState(index); toggleBuy(index)}}
@@ -90,7 +91,7 @@ export default function Nft() {
                     <img src={ETH} alt="logo" className='ETH_logo' />
                   </motion.div>
                 )}
-                <img src={nft.nft.image_url} alt={`NFT Image ${index}`} className='img_pudgy' />
+                <motion.img src={nft.nft.image_url} alt={`NFT Image ${index}`} className='img_pudgy' />
                 <div className='img_des_container'>
                   <h4>{nft.nft.name}</h4>
                   <h4>Rank: {nft.nft.rarity.rank}</h4>
