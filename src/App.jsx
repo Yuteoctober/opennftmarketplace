@@ -42,7 +42,6 @@ function App() {
     const [defaultNft, setDefaultNft] = useState([]);
     const [scrollPosition, setScrollPosition] = useState(0);
     const [screenLoading, setScreenLoading] = useState(true);
-    const [visitor, setVisitor] = useState(1);
 
 
       // Function to fetch the current visitor count
@@ -51,15 +50,14 @@ function App() {
         })
         .then((response) => {
             const result = response.data.visit; 
-            setVisitor(result)
-            updateVisitorCount();
+            updateVisitorCount(result);
         })
         .catch(err => console.log('Error fetching visitor count:', err));
       }
 
       // Function to update the visitor count
-      function updateVisitorCount() {
-        const updatecount = visitor + 1
+      function updateVisitorCount(result) {
+        const updatecount = result + 1
         axios.put(`https://notebackend-qr35.onrender.com/visit/updatecount/opennft`, { num: updatecount }, {
             headers: {
                 'Content-Type': 'application/json',
@@ -67,7 +65,7 @@ function App() {
             }
         })
         .then(() => {
-            console.log(`Visitor count: ${visitor + 1}`);
+            console.log(`Visitor count: ${result}`);
         })
         .catch(err => console.log('Error updating visitor count:', err));
       }
