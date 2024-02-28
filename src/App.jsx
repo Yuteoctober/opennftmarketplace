@@ -42,6 +42,43 @@ function App() {
     const [defaultNft, setDefaultNft] = useState([]);
     const [scrollPosition, setScrollPosition] = useState(0);
     const [screenLoading, setScreenLoading] = useState(true);
+    const [visitor, setVisitor] = useState(1);
+
+
+      // Function to fetch the current visitor count
+      function fetchVisitorCount() {
+        axios.get(`https://opennft.netlify.app/visit/getcount/opennft`, {
+            headers: {
+                'Content-Type': 'application/json',
+                'Access-Control-Allow-Origin': '*'
+            }
+        })
+        .then((response) => {
+            console.log(response); 
+            const result = response.data.visit; 
+            console.log('Visit count:', result); 
+
+            
+            setVisitor(result)
+            updateVisitorCount(result + 1);
+        })
+        .catch(err => console.log('Error fetching visitor count:', err));
+      }
+
+      // Function to update the visitor count
+      function updateVisitorCount(updatedCount) {
+        axios.put(`https://opennft.netlify.app/visit/updatecount/opennft`, { num: updatedCount }, {
+            headers: {
+                'Content-Type': 'application/json',
+                'Access-Control-Allow-Origin': '*'
+            }
+        })
+        .then(() => {
+            console.log('Visitor count updated successfully');
+        })
+        .catch(err => console.log('Error updating visitor count:', err));
+      }
+        
 
 
     const handleScroll = () => {
@@ -63,6 +100,7 @@ function App() {
 
     useEffect(() => {
         fetchData();
+        fetchVisitorCount();
     }, []);
 
     const fetchData = async () => {
