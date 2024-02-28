@@ -47,38 +47,30 @@ function App() {
 
       // Function to fetch the current visitor count
       function fetchVisitorCount() {
-        axios.get(`https://opennft.netlify.app/visit/getcount/opennft`, {
-            headers: {
-                'Content-Type': 'application/json',
-                'Access-Control-Allow-Origin': '*'
-            }
+        axios.get(`https://notebackend-qr35.onrender.com/visit/getcount/opennft`, {
         })
         .then((response) => {
-            console.log(response); 
             const result = response.data.visit; 
-            console.log('Visit count:', result); 
-
-            
             setVisitor(result)
-            updateVisitorCount(result + 1);
+            updateVisitorCount();
         })
         .catch(err => console.log('Error fetching visitor count:', err));
       }
 
       // Function to update the visitor count
-      function updateVisitorCount(updatedCount) {
-        axios.put(`https://opennft.netlify.app/visit/updatecount/opennft`, { num: updatedCount }, {
+      function updateVisitorCount() {
+        const updatecount = visitor + 1
+        axios.put(`https://notebackend-qr35.onrender.com/visit/updatecount/opennft`, { num: updatecount }, {
             headers: {
                 'Content-Type': 'application/json',
                 'Access-Control-Allow-Origin': '*'
             }
         })
         .then(() => {
-            console.log('Visitor count updated successfully');
+            console.log(`Visitor count: ${visitor + 1}`);
         })
         .catch(err => console.log('Error updating visitor count:', err));
       }
-        
 
 
     const handleScroll = () => {
