@@ -82,8 +82,10 @@ export default function Nft() {
                 </Link>  
 
                 <div className='img_des_container'>
-                  <h4>{nft.nft.name}</h4>
-                  <h4>Rank: {nft.nft.rarity.rank}</h4>
+                  <Link to={`/items/${nft.nft.rarity.rank}`}>
+                    <h4>{nft.nft.name}</h4>
+                    <h4>Rank: {nft.nft.rarity.rank}</h4>
+                  </Link>
                   <motion.h3
                     onClick={() => addToCart(nft)}
                     animate={{y: buy[index] ? 0 : 50, opacity: buy[index]? 1 : 0}}
