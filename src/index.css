@@ -8,6 +8,10 @@ body {
   background: #151515;
 }
 
+a {
+  text-decoration: none;
+}
+
 .screen_loading {
   display: flex;
   position: relative;
@@ -1022,6 +1026,170 @@ section {
 }
 
 
+/* ------------------- item detail --------------- */
+
+.item_detail_section {
+  width: 100%;
+}
+
+
+.item_detail_name_container {
+  position: relative;
+  margin-top: 6rem;
+  margin-left: 1.5rem;
+}
+
+.item_detail_name_container h3 {
+  font-size: 17px;
+  font-weight: 500;
+  color: rgb(160, 209, 240);
+}
+
+.item_detail_name_container h1 {
+  margin-top: 1rem;
+  font-size: 30px;
+  color: white;
+}
+
+.item_detail_container {
+  display: grid;
+  max-width: 1200px;
+  height: 680px;
+  margin-top: 1.5rem;
+  column-gap: 1rem;
+  grid-template-columns: 1fr 1fr;
+  grid-template-rows: 1fr 1fr;
+  grid-template-areas: 
+    'item_detail_img_container item_detail_des_container'
+    'item_detail_buy_btn item_detail_des_container';
+}
+
+.item_detail_img_container {
+  grid-area: item_detail_img_container;
+  position: relative;
+  max-width: 800px;
+  width: 95%;
+  margin-left: 1.5rem;
+  border-radius: .6rem;
+}
+
+.item_detail_img_nav {
+  display: flex;
+  height: 45px;
+  align-items: center;
+  border: 1px solid rgba(107, 106, 106, 0.196);
+  border-bottom: none;
+  border-top-left-radius: .6rem;
+  border-top-right-radius: .6rem;
+}
+
+.item_detail_img_nav .item_detail_ETH {
+  position: relative;
+  width: 45px;
+  cursor: pointer;
+}
+
+.item_detail_img_container .item_detail_img {
+  width: 100%;
+  border-bottom-left-radius: .5rem;
+  border-bottom-right-radius: .5rem;
+}
+
+.item_detail_des_container {
+  grid-area: item_detail_des_container;
+  width: 95%;
+  max-height: 90%;
+  height: fit-content;
+  border-radius: .5rem;
+  border: 1px solid rgba(107, 106, 106, 0.196);
+  margin-bottom: 2rem;
+}
+
+.item_detail_des_container .trait {
+  display: flex;
+  height: 70px;
+  position: relative;
+  align-items: center;
+  justify-content: space-between;
+  border-top-left-radius: .5rem;
+  border-top-right-radius: .5rem;
+  border-bottom: 1px solid rgba(107, 106, 106, 0.196);
+}
+
+.item_detail_des_container .trait h4 {
+  position: relative;
+  top: 2px;
+  font-size: 24px;
+  margin-left: 1.5rem;
+  color: white;
+}
+
+.item_detail_des_container .trait span {
+  position: relative;
+  margin-left: 1rem;
+  bottom: 5px;
+  font-size: 16px;
+  color: white;
+}
+
+.item_detail_des_container .trait h3 {
+  position: relative;
+  top: 3px;
+  right: 1.5rem;
+  font-size: 16px;
+  color: white;
+  cursor: pointer;
+}
+
+.trait_detail_container {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(170px, 1fr)); 
+  row-gap: .5rem;
+  column-gap: .4rem;
+  padding: .4rem;
+}
+
+.trait_detail_container .trait_detail {
+  display: grid;
+  place-items: center;
+  row-gap: .4rem;
+  padding-top: 15px;
+  padding-bottom: 15px;
+  border-radius: .3rem;
+  background: rgb(39, 38, 38);
+  cursor: pointer;
+} 
+
+.trait_detail_container .trait_detail h5 {
+  color: grey;
+}
+
+.trait_detail_container .trait_detail h4 {
+  color: white;
+  font-size: 14px;
+}
+
+.item_detail_buy_btn {
+  grid-area: item_detail_buy_btn;
+  position: relative;
+  width: 95%;
+  height: fit-content;
+  margin-top: .7rem;
+  margin-left: 1.5rem;
+  margin-bottom: 2rem;
+  padding: 8px 0px;
+  border: none;
+  outline: none;
+  border-radius: .5rem;
+  cursor: pointer;
+  color: white;
+  background: rgba(69, 146, 241, 0.868);
+  border: 1px solid rgba(128, 128, 128, 0.329);
+}
+
+.item_detail_buy_btn:hover {
+  background: rgba(56, 118, 193, 0.868);
+}
 
 
 /* ---------------- MEDIA ---------------- */
@@ -1176,7 +1344,33 @@ section {
     grid-template-columns: repeat(auto-fill, minmax(150px, 1fr)); 
 
   }
+
+  .item_detail_container {
+    display: block;
+    height: auto;
+  }
   
+  .trait_detail_container  {
+    grid-template-columns: repeat(auto-fill, minmax(200px, 1fr)); 
+  }
+  
+
+  .item_detail_des_container {  
+    margin-left: 1.5rem;
+    width: 89%;
+  }
+
+  .item_detail_img_container {
+    width: 89%;
+  }
+
+  .item_detail_buy_btn {
+    width: 89%;
+  }
+  
+  .img_des_container h3 {
+    display: none;
+  }
 
 }
 
@@ -1240,6 +1434,15 @@ section {
     
     margin-left: 4.2%;
     margin-right: 4.2%;
+  }
+
+  .item_detail_name_container {
+    margin-left: 4.2%;
+    margin-right: 4.2%;
+  }
+
+  .item_detail_container {
+    margin-left: 3%;
   }
 }
 

@@ -6,12 +6,14 @@ import axios from 'axios';
 import {Routes, Route} from 'react-router-dom'
 import Cart from './components/Cart';
 import UserContext  from './UserContext';
+import Bg from './components/Bg';
 import Nav from './components/Nav';
 import ProjectPic from './components/ProjectPic';
 import Search from './components/Search';
 import Live from './components/Live';
 import Nft from './components/Nft';
 import Charts from './components/Chart';
+import Itemdetail from './components/Itemdetail';
 import { TypeAnimation } from 'react-type-animation';
 
 
@@ -43,6 +45,23 @@ function App() {
     const [scrollPosition, setScrollPosition] = useState(0);
     const [screenLoading, setScreenLoading] = useState(true);
 
+
+    // function add buy to cart 
+    const addToCart = (nft) => {
+      
+      if (
+        cartItem &&
+        cartItem.some((item) => item.nft.name === nft.nft.name)
+      ) {
+        alert(`Item is already in your cart.`);
+        return;
+      }
+  
+      const updatedCart = [...cartItem, nft];
+      setCartItem(updatedCart);
+      alert(`Item has been added in your cart.`)
+  
+  };
 
       // Function to fetch the current visitor count
       function fetchVisitorCount() {
@@ -159,6 +178,7 @@ function App() {
       optionFilter, setOptionFilter,
       optionTxt, setOptionTxt,
       prevSortedData, setPrevSortedData,
+      addToCart,
     }
 
     
@@ -187,6 +207,7 @@ function App() {
       <Routes>
         <Route path='/' element={<Home />}/>
         <Route path='/cart' element={<Cart />}/>
+        <Route path='/items/:rank' element={<Itemdetail />}/>
       </Routes>
     </UserContext.Provider>
   )
@@ -199,6 +220,7 @@ function Home() {
 
   return (
       <section style={{height: mobileSandwich? '100%':''}} >
+        <Bg />
         <Nav />
         <ProjectPic />
         <Search />

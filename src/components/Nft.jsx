@@ -3,6 +3,7 @@ import { useContext } from "react";
 import UseContext from '../UserContext'
 import { motion } from "framer-motion"
 import ETH from '../assets/Ethereum-Icon-Purple-Logo.wine.svg'
+import { Link } from 'react-router-dom';
 
 export default function Nft() {
 
@@ -13,26 +14,10 @@ export default function Nft() {
         filterByInput, 
         filteredNftData, 
         nftData, 
-        cartItem, setCartItem
+        cartItem,
+        addToCart,
       } = useContext(UseContext);
 
-
-    // function add buy to cart 
-    const addToCart = (nft) => {
-      
-      if (
-        cartItem &&
-        cartItem.some((item) => item.nft.name === nft.nft.name)
-      ) {
-        alert(`Item is already in your cart.`);
-        return;
-      }
-  
-      const updatedCart = [...cartItem, nft];
-      setCartItem(updatedCart);
-      alert(`Item has been added in your cart.`)
-  
-  };
 
     // Function to toggle buy button
     const toggleBuy = (index) => {
@@ -91,7 +76,11 @@ export default function Nft() {
                     <img src={ETH} alt="logo" className='ETH_logo' />
                   </motion.div>
                 )}
-                <motion.img src={nft.nft.image_url} alt={`NFT Image ${index}`} className='img_pudgy' />
+
+                <Link to={`/items/${nft.nft.rarity.rank}`}>
+                  <motion.img src={nft.nft.image_url} alt={`NFT Image ${index}`} className='img_pudgy' />
+                </Link>  
+
                 <div className='img_des_container'>
                   <h4>{nft.nft.name}</h4>
                   <h4>Rank: {nft.nft.rarity.rank}</h4>

@@ -7,7 +7,6 @@ import { BsXLg,
 import { MdOutlineShoppingCart } from "react-icons/md";
 import { motion } from "framer-motion"
 import OpenLogo from '../assets/opensea.svg'
-import bg from '../assets/63d2aff450d54fa7c21bde38_ff12374123ac5e8571b01d03874e8a76-_1_.jpg';
 
 
 
@@ -28,18 +27,16 @@ export default function Nav() {
 
   return (
     <>
-        <div className="bg">
-          <img src={bg} />
-        </div>
-
-        <div className="blur"></div>
+        
         <motion.div className="nav_container" 
           style={{
             background: mobileSandwich ? '#121313' : (!mobileSandwich && scrollPosition < 50 ? 'transparent' : '#151515')
           }}>
           <div className='logo'>
             <img src={OpenLogo} alt="OpenLogo" />
-            <h2>OpenNFT</h2>
+            <Link to='/' >
+              <h2>OpenNFT</h2>
+            </Link> 
           </div>
           <div className='slash'></div>
           <div className='nav_btn'>
