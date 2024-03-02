@@ -32,6 +32,7 @@ export default function ItemDetail() {
             <div className="item_detail_name_container">
                 <h3>Pudgy Penguins <span><FcApproval /></span></h3>
                 <h1>{matchedNft.nft.name}</h1>
+                <h2>Rank: #{matchedNft.nft.rarity.rank}</h2>
             </div>
 
             <div className="item_detail_container">

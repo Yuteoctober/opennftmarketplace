@@ -1051,6 +1051,12 @@ section {
   color: white;
 }
 
+.item_detail_name_container h2 {
+  margin-top: .5rem;
+  font-size: 22px;
+  color: rgb(205, 204, 204);
+}
+
 .item_detail_container {
   display: grid;
   max-width: 1200px;
@@ -1077,7 +1083,7 @@ section {
   display: flex;
   height: 45px;
   align-items: center;
-  border: 1px solid rgba(107, 106, 106, 0.196);
+  border: 1px solid rgba(118, 118, 118, 0.386);
   border-bottom: none;
   border-top-left-radius: .6rem;
   border-top-right-radius: .6rem;
@@ -1101,7 +1107,7 @@ section {
   max-height: 90%;
   height: fit-content;
   border-radius: .5rem;
-  border: 1px solid rgba(107, 106, 106, 0.196);
+  border: 1px solid rgba(118, 118, 118, 0.386);
   margin-bottom: 2rem;
 }
 
@@ -1113,14 +1119,14 @@ section {
   justify-content: space-between;
   border-top-left-radius: .5rem;
   border-top-right-radius: .5rem;
-  border-bottom: 1px solid rgba(107, 106, 106, 0.196);
+  border-bottom: 1px solid rgba(118, 118, 118, 0.386);
 }
 
 .item_detail_des_container .trait h4 {
   position: relative;
   top: 2px;
   font-size: 24px;
-  margin-left: 1.5rem;
+  margin-left: .7rem;
   color: white;
 }
 
@@ -1177,7 +1183,7 @@ section {
   margin-top: .7rem;
   margin-left: 1.5rem;
   margin-bottom: 2rem;
-  padding: 8px 0px;
+  padding: 11px 0px;
   border: none;
   outline: none;
   border-radius: .5rem;
