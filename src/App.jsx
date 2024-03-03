@@ -216,10 +216,8 @@ function App() {
 
 function Home() {
 
-  const {mobileSandwich} = useContext(UseContext);
-
   return (
-      <section style={{height: mobileSandwich? '100%':''}} >
+      <section>
         <Bg />
         <Nav />
         <ProjectPic />
