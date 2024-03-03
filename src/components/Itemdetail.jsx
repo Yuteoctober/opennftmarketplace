@@ -1,15 +1,17 @@
-import { useParams } from 'react-router-dom';
-import { useState,useContext } from "react";
+import { useNavigate, useParams } from 'react-router-dom';
+import { useState, useContext, useEffect } from "react";
 import UseContext from '../UserContext'
 import Nav from './Nav';
 import { FcApproval } from 'react-icons/fc';
 import { AiOutlineQq } from "react-icons/ai";
-import { BsChevronRight, BsChevronDown } from "react-icons/bs";
+import { BsChevronRight, BsChevronDown, BsJustifyLeft } from "react-icons/bs";
 import ETH from '../assets/Ethereum-Icon-Purple-Logo.wine.svg'
 
 export default function ItemDetail() {
 
     const [traitHide, setTRadeHide] = useState(false)
+
+    const navigate = useNavigate();
 
     let { rank } = useParams();
 
@@ -19,12 +21,15 @@ export default function ItemDetail() {
     const matchedNft = nftData.find(nft => nft.nft.rarity.rank === parseInt(rank))
     console.log(matchedNft)
 
+    useEffect(() => {
+        if (!matchedNft){
+            navigate('/');
+        }
+    }, []);
+
     if (!matchedNft){
-        return (
-            <h2 style={{color:'white', padding: '1rem'}}>NFT not found</h2>
-        )
+        return null;
     }
-   
 
     return (
         <section className='item_detail_section'>
@@ -53,6 +58,15 @@ export default function ItemDetail() {
                 </button>
 
                 <div className="item_detail_des_container">
+                <div className="des_container_top_right">
+                        <div className="top_des">
+                            <span><BsJustifyLeft/></span>
+                            <h4>Description</h4>
+                        </div>
+                        <div className="btm_des">
+                            <h4>{matchedNft.nft.description}</h4>
+                        </div>
+                </div>
                     <div className="trait">
                         <h4>
                             <AiOutlineQq />
@@ -61,9 +75,10 @@ export default function ItemDetail() {
                         <h3
                             onClick={() => setTRadeHide(!traitHide)}
                             >
-                            {traitHide? <BsChevronDown/>:<BsChevronRight/>}
+                            {traitHide? <BsChevronRight/>:<BsChevronDown/>}
                         </h3>
                     </div>
+
                         <div className="trait_detail_container"
                             style={{display: traitHide?'none':''}}
                         >
