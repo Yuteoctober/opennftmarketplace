@@ -1405,17 +1405,17 @@ section {
 
   .item_detail_des_container {  
     margin: 0 auto;
-    width: 88%;
+    width: 89%;
   }
   
 
   .item_detail_img_container {
-    width: 88%;
+    width: 89%;
     margin: 0 auto;
   }
 
   .item_detail_buy_btn {
-    width: 88%;
+    width: 89%;
     left: 50%;
     margin: 0;
     margin-top: .4rem;
@@ -1428,7 +1428,7 @@ section {
   }
 
   .item_detail_name_container {
-    margin-left: 6%;
+    margin-left: 5%;
   }
 
 }
