@@ -24,6 +24,8 @@ export default function ItemDetail() {
     useEffect(() => {
         if (!matchedNft){
             navigate('/');
+        } else {
+            window.scrollTo(0, 0);
         }
     }, []);
 
@@ -67,7 +69,7 @@ export default function ItemDetail() {
                             <h2>{matchedNft.nft.description}</h2>
                         </div>
                 </div>
-                    <div className="trait" style={{border: traitHide?'none':''}}>
+                    <div className="trait">
                         <h4>
                             <AiOutlineQq />
                             <span>Traits</span>
@@ -80,7 +82,7 @@ export default function ItemDetail() {
                     </div>
 
                         <div className="trait_detail_container"
-                            style={{display: traitHide?'none':''}}
+                            style={{display: traitHide?'none':'', border: traitHide?'':'none'}}
                         >
                             <div className="trait_detail">
                                 <h5>{matchedNft.nft.traits[1].trait_type}</h5>
