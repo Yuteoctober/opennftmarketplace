@@ -1406,6 +1406,7 @@ section {
   .item_detail_des_container {  
     margin: 0 auto;
     width: 89%;
+    margin-bottom: 2rem;
   }
   
 
