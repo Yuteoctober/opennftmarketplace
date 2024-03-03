@@ -64,7 +64,7 @@ export default function ItemDetail() {
                             <h4>Description</h4>
                         </div>
                         <div className="btm_des">
-                            <h4>{matchedNft.nft.description}</h4>
+                            <h2>{matchedNft.nft.description}</h2>
                         </div>
                 </div>
                     <div className="trait">
@@ -80,7 +80,7 @@ export default function ItemDetail() {
                     </div>
 
                         <div className="trait_detail_container"
-                            style={{display: traitHide?'none':''}}
+                            style={{display: traitHide?'none':'', border: traitHide?'none':''}}
                         >
                             <div className="trait_detail">
                                 <h5>{matchedNft.nft.traits[1].trait_type}</h5>
