@@ -1404,20 +1404,31 @@ section {
   
 
   .item_detail_des_container {  
-    margin-left: 1.5rem;
-    width: 89%;
+    margin: 0 auto;
+    width: 93%;
   }
+  
 
   .item_detail_img_container {
-    width: 89%;
+    width: 92%;
+    margin: 0 auto;
   }
 
   .item_detail_buy_btn {
-    width: 89%;
+    width: 93%;
+    left: 50%;
+    margin: 0;
+    margin-top: .4rem;
+    margin-bottom: 1.5rem;
+    transform: translate(-50%);
   }
   
   .img_des_container h3 {
     display: none;
+  }
+
+  .item_detail_name_container {
+    margin-left: 4%;
   }
 
 }

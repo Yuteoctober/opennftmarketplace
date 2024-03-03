@@ -80,7 +80,7 @@ export default function ItemDetail() {
                     </div>
 
                         <div className="trait_detail_container"
-                            style={{display: traitHide?'none':'', border: traitHide?'none':''}}
+                            style={{display: traitHide?'none':'', border: traitHide?'':'none'}}
                         >
                             <div className="trait_detail">
                                 <h5>{matchedNft.nft.traits[1].trait_type}</h5>
