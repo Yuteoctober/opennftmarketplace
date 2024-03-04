@@ -6,6 +6,7 @@ import stop from '../assets/stop.png'
 import road from '../assets/road.png'
 import { FaHouseChimney } from "react-icons/fa6";
 import { Link } from 'react-router-dom';
+import { motion } from "framer-motion"
 
 
 function Cart() {
@@ -22,15 +23,31 @@ function Cart() {
     <section className='cart_page'>
       {cartItem.length <= 0 ? (
         <>
-          <div className="dance_gif">
+          <motion.div className="dance_gif"
+            initial={{opacity: 0}}
+            animate={{opacity: 1}}
+            transition={{ease: 'easeIn'}}
+          >
             <img src={dance} alt="dance" />
-          </div>
-          <div className="stop">
+          </motion.div>
+          <motion.div className="stop"
+            initial={{opacity: 0}}
+            animate={{opacity: 1}}
+            transition={{ease: 'easeIn'}}
+          >
             <img src={stop} alt="stop" className="cart_stop" />
             <h4>Empty <br />cart</h4>
-          </div>
-          <img src={road} alt="road" className="cart_road" />
-          <div className="back_home">
+          </motion.div>
+          <motion.img src={road} alt="road" className="cart_road" 
+            initial={{opacity: 0}}
+            animate={{opacity: 1}}
+            transition={{ease: 'easeIn'}}
+          />
+          <motion.div className="back_home"
+            initial={{opacity: 0}}
+            animate={{opacity: 1}}
+            transition={{ease: 'easeIn'}}
+          >
               <Link to="/" style={{color: 'inherit', textDecoration: 'none'}} >
                   <h3>
                     Back to homepage 
@@ -39,7 +56,7 @@ function Cart() {
                     </span>
                   </h3>
               </Link> 
-          </div>
+          </motion.div>
         </>
       ) : (
         <div className="cart_container">
