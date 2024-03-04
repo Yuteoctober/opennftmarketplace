@@ -223,7 +223,10 @@ section {
 }
 
 .cart_amount {
+  display: flex;
   position: absolute;
+  justify-content: center;
+  align-items: center;
   width: 17px;
   height: 17px;
   right: 6px;
@@ -236,12 +239,16 @@ section {
 
 .cart_amount h3 {
   position: relative;
-  bottom: 2px;
-  right: .2px;
   font-size: 13px;
   font-weight: 500;
   color: white;
-  text-align: center;
+  bottom: 1px;
+}
+
+@supports (-webkit-touch-callout: none) {
+  .cart_amount h3 {
+      top: 0.1px;
+  }
 }
 
 .cart {
