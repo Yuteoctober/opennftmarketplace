@@ -6,6 +6,7 @@ import { FcApproval } from 'react-icons/fc';
 import { AiOutlineQq } from "react-icons/ai";
 import { BsChevronRight, BsChevronDown, BsJustifyLeft } from "react-icons/bs";
 import ETH from '../assets/Ethereum-Icon-Purple-Logo.wine.svg'
+import { motion } from 'framer-motion';
 
 export default function ItemDetail() {
 
