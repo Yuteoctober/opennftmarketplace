@@ -1078,7 +1078,7 @@ section {
 .item_detail_name_container h3 {
   font-size: 17px;
   font-weight: 500;
-  color: rgb(160, 209, 240);
+  color: rgb(173, 208, 253);
 }
 
 .item_detail_name_container h1 {
@@ -1091,6 +1091,11 @@ section {
   margin-top: .5rem;
   font-size: 22px;
   color: rgb(205, 204, 204);
+}
+
+.item_detail_name_container span {
+  position: relative;
+  top: 3px;
 }
 
 .item_detail_container {
@@ -1465,7 +1470,7 @@ section {
   }
 
   .item_detail_name_container {
-    margin-left: 5%;
+    margin-left: 5.3%;
   }
 
 }
