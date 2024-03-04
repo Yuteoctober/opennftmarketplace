@@ -222,6 +222,28 @@ section {
   background: rgba(61, 59, 59, 0.769);
 }
 
+.cart_amount {
+  position: absolute;
+  width: 17px;
+  height: 17px;
+  right: 6px;
+  top: 2px;
+  background: rgba(113, 166, 213, 0.881);
+  border-radius: 50%;
+  z-index: 99999;
+}
+
+
+.cart_amount h3 {
+  position: relative;
+  bottom: 2px;
+  right: .2px;
+  font-size: 13px;
+  font-weight: 500;
+  color: white;
+  text-align: center;
+}
+
 .cart {
   position: absolute;
   padding: 5px 10px;

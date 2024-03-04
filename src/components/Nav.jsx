@@ -19,6 +19,7 @@ export default function Nav() {
         drops, setDrops,
         stats, setStats,
         scrollPosition,
+        cartItem,
       } = useContext(UseContext);
 
 
@@ -79,6 +80,9 @@ export default function Nav() {
             {mobileSandwich?<BsXLg className="nav_x"/>:<BsList className="nav_sandwich"/>}
           </div>
             <div className='cart'>
+            <div className="cart_amount">
+              <h3>{cartItem.length}</h3>
+            </div>
             <Link to="/cart" style={{color: 'inherit'}}>
               <button>
                 <span>
