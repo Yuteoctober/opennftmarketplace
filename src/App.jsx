@@ -1,7 +1,6 @@
 import beach from './assets/beach_chair.png'
 import loading from './assets/loadpen.gif'
 import { useState, useEffect, useContext} from 'react';
-import UseContext from './UserContext'
 import axios from 'axios';
 import {Routes, Route} from 'react-router-dom'
 import Cart from './components/Cart';
@@ -65,7 +64,7 @@ function App() {
 
       // Function to fetch the current visitor count
       function fetchVisitorCount() {
-        axios.get(`https://notebackend-qr35.onrender.com/visit/getcount/opennft`, {
+        axios.get(`https://notebackend2.onrender.com/visit/getcount/opennft`, {
         })
         .then((response) => {
             const result = response.data.visit; 
@@ -77,7 +76,7 @@ function App() {
       // Function to update the visitor count
       function updateVisitorCount(result) {
         const updatecount = result + 1
-        axios.put(`https://notebackend-qr35.onrender.com/visit/updatecount/opennft`, { num: updatecount }, {
+        axios.put(`https://notebackend2.onrender.com/visit/updatecount/opennft`, { num: updatecount }, {
             headers: {
                 'Content-Type': 'application/json',
                 'Access-Control-Allow-Origin': '*'
